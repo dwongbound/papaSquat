@@ -1,4 +1,4 @@
-package com.example.googledemo;
+package com.example.springboot;
 
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
