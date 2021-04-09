@@ -20,13 +20,13 @@
 ### Steps to Bring Up the Web App ###
 [generally following instructions at this link: https://spring.io/guides/gs/spring-boot/]
 1. Download Maven.
-  - Download Maven as a zip file from this site (https://maven.apache.org/)
-  - Go to the folder where the zip file was installed, and type `unzip apache-maven-3.8.1-bin.zip`.
-  - Add it to your environment variables by typing `export PATH="$NAMEOFFOLDER/apache-maven-3.8.1/bin:$PATH"`.
+    - Download Maven as a zip file from this site (https://maven.apache.org/)
+    - Go to the folder where the zip file was installed, and type `unzip apache-maven-3.8.1-bin.zip`.
+    - Add it to your environment variables by typing `export PATH="$NAMEOFFOLDER/apache-maven-3.8.1/bin:$PATH"`.
 2. Go back to your project, and go to the sprint-boot folder: `cd spring-boot/`.
 3. Make the `mvnw` file an executable by typing `chmod a+x mvnw`.
 4. Start the local development website using `./mvnw spring-boot:run`. (This may take a while to download all the dependencies)
-  - This may fail depending on if there are any errors, or if you don't have the right credentials.
+    - This may fail depending on if there are any errors, or if you don't have the right credentials.
 5. Open a browser and go to http://localhost:8080/
 
 ## PR Review Process ##
@@ -53,5 +53,5 @@
 
 ### Connecting Springboot to DB ###
 1. Go to `spring-boot/src/secrets/firebaseDB.json`
-2. Put the DB secrets there. This will tell Springboot what DB to connect to. 
+2. Put the DB secrets there. This will tell Springboot what DB to connect to.
 
