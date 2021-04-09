@@ -45,8 +45,8 @@
 ## Database ##
 ### Viewing Data ###
 1. Ask a member of the team to give you access to the database.
-  - There are two databases, one called `papasquat-test` and one called `papasquat-1fdae`
-  - The first one is for development, and the second one is for production.
+    - There are two databases, one called `papasquat-test` and one called `papasquat-1fdae`
+    - The first one is for development, and the second one is for production.
 2. Go to https://console.firebase.google.com/u/0/. You should be able to click on the project in your dashboard if you have been added. 
 3. After clicking the project, go to "Firestore Database" on the left navbar to see the database. 
 4. You can edit current documents, delete them, or create new ones through this page.
