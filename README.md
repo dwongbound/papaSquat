@@ -35,6 +35,7 @@
     - You can work off someone else's branch if they've pushed it by checking out to their branch name: `git checkout theirBranchName`.
 2. Make your changes, `git add`, `git commit`, then `git push origin branchName`
     - If you forget to make a new branch, you can always do `git stash` then `git stash pop` after you create your branch.
+    - If you are trying to push but it doesn't let you, chances are it's because you haven't pulled the latest commits. Do so by doing `git pull` and squash any merge conflicts, then commit and merge again. 
 4. Create your pull request in the Pull Requests tab. Assign yourself as the assignee, and add the whole team as reviewers.
     - All PRs need at least 3 approvers to merge.
     - After there are enough approvers, the 
