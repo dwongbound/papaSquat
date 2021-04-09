@@ -1,20 +1,28 @@
 # papaSquat
 
+- [Cloning the Code](#cloning-code-from-github)
 - [Backend Development](#backend-development)
 - [PR Review Process](#pr-review-process)
 - [Setting Up the Database](#database)
 
-## Backend Development ##
 ### Dependencies ###
 1. Maven (https://maven.apache.org/)
 2. IDE (https://code.visualstudio.com/)
+3. Git (https://git-scm.com/downloads)
 
+## Cloning Code from Github ##
+1. Download Git Bash (https://git-scm.com/downloads)
+2. Check if it's configured correctly by going to terminal and typing: `git --version`
+3. Copy the URL of this github repo
+4. Navigate to the folder where you want the project to be, then type `git clone REPO_URL`
+
+## Backend Development ##
 ### Steps to Bring Up the Web App ###
 [generally following instructions at this link: https://spring.io/guides/gs/spring-boot/]
 1. Download Maven.
   - Download Maven as a zip file from this site (https://maven.apache.org/)
   - Go to the folder where the zip file was installed, and type `unzip apache-maven-3.8.1-bin.zip`.
-  - Add it to your environment variables by typing `export PATH="$_nameoffolder_/apache-maven-3.8.1/bin:$PATH"`.
+  - Add it to your environment variables by typing `export PATH="$NAMEOFFOLDER/apache-maven-3.8.1/bin:$PATH"`.
 2. Go back to your project, and go to the sprint-boot folder: `cd spring-boot/`.
 3. Make the `mvnw` file an executable by typing `chmod a+x mvnw`.
 4. Start the local development website using `./mvnw spring-boot:run`. (This may take a while to download all the dependencies)
@@ -27,6 +35,7 @@
     - You can work off someone else's branch if they've pushed it by checking out to their branch name: `git checkout theirBranchName`.
 2. Make your changes, `git add`, `git commit`, then `git push origin branchName`
     - If you forget to make a new branch, you can always do `git stash` then `git stash pop` after you create your branch.
+    - If you are trying to push but it doesn't let you, chances are it's because you haven't pulled the latest commits. Do so by doing `git pull` and squash any merge conflicts, then commit and merge again. 
 4. Create your pull request in the Pull Requests tab. Assign yourself as the assignee, and add the whole team as reviewers.
     - All PRs need at least 3 approvers to merge.
     - After there are enough approvers, the 
