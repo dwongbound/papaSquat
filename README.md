@@ -1,20 +1,28 @@
 # papaSquat
 
+- [Cloning the Code](#cloning-code-from-github)
 - [Backend Development](#backend-development)
 - [PR Review Process](#pr-review-process)
 - [Setting Up the Database](#database)
 
-## Backend Development ##
 ### Dependencies ###
 1. Maven (https://maven.apache.org/)
 2. IDE (https://code.visualstudio.com/)
+3. Git (https://git-scm.com/downloads)
 
+## Cloning Code from Github ##
+1. Download Git Bash (https://git-scm.com/downloads)
+2. Check if it's configured correctly by going to terminal and typing: `git --version`
+3. Copy the URL of this github repo
+4. Navigate to the folder where you want the project to be, then type `git clone REPO_URL`
+
+## Backend Development ##
 ### Steps to Bring Up the Web App ###
 [generally following instructions at this link: https://spring.io/guides/gs/spring-boot/]
 1. Download Maven.
   - Download Maven as a zip file from this site (https://maven.apache.org/)
   - Go to the folder where the zip file was installed, and type `unzip apache-maven-3.8.1-bin.zip`.
-  - Add it to your environment variables by typing `export PATH="$_nameoffolder_/apache-maven-3.8.1/bin:$PATH"`.
+  - Add it to your environment variables by typing `export PATH="$NAMEOFFOLDER/apache-maven-3.8.1/bin:$PATH"`.
 2. Go back to your project, and go to the sprint-boot folder: `cd spring-boot/`.
 3. Make the `mvnw` file an executable by typing `chmod a+x mvnw`.
 4. Start the local development website using `./mvnw spring-boot:run`. (This may take a while to download all the dependencies)
