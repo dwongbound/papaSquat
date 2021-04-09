@@ -1,10 +1,15 @@
 import React from 'react';
 //import $ from 'jquery';
 import './App.css';
-//import Homepage from './Components/Homepage';
-//import Description from './Components/Description';
-//import Create from './Components/Create';
+//import './css/styles.css';
+import Homepage from './Components/Homepage';
+import Description from './Components/Description';
+import Create from './Components/Create';
+//import Header from './Components/Header';
+import { ReactRouterGlobalHistory } from "react-router-global-history";
 import ReactDOM from 'react-dom';
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import NavBar from "./Components/NavBar.js"
 
 
 function fetch() {
@@ -28,8 +33,24 @@ class App extends React.Component {
 
   render() {
     return (
-      <div>
-        <button onClick={this.toggleButtonState}> Click me </button>
+      <div className ="App">
+      <Router>
+        <ReactRouterGlobalHistory />
+        <Switch>
+          <Route exact path="/HomePage">
+            <Homepage />
+          </Route>
+          <Route exact path="/Description">
+            <Description />
+          </Route>
+          <Route exact path="/Create">
+            <Create />
+          </Route>
+        </Switch>
+      </Router>
+      <Homepage />
+      
+  
         <div>{this.state.result}</div>
       </div>
     );

@@ -1,0 +1,266 @@
+/* animations */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes textwhite {
+  0% {
+  }
+  100% {
+    color: white;
+  }
+}
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+  font-family: Lato, Arial, sans-serif;
+}
+html {
+  scroll-behavior: smooth;
+}
+html {
+  width: 100%;
+}
+h1 {
+  font-weight: normal;
+}
+.clearfloat {
+  clear: both;
+}
+.main {
+  /*	background-image: url("images/headerbackground.svg");
+	background-position: bottom right;
+	background-size: cover;*/
+  height: 100vh;
+  width: auto;
+}
+
+.main-nav {
+  width: 100%;
+  height: 110px;
+  position: fixed;
+  top: 0;
+  z-index: 1;
+  transition: all 600ms ease-in-out;
+}
+.small {
+  height: 110px;
+  background-color: white;
+  box-shadow: 0 2px 12px 2px rgba(0, 0, 0, 0.18);
+}
+.navbar {
+  width: auto;
+  padding: 15px;
+  padding-right: 30px;
+  padding-top: 33px;
+  float: right;
+  opacity: 1;
+}
+.nav-fade-in-animation {
+  animation: fadeIn 1.2s 0s 1 forwards;
+}
+.tags-fade-in-animation {
+  animation: fadeIn 1.2s 0.4s 1 forwards;
+}
+.workouts-fade-in-animation {
+  animation: fadeIn 1.2s 0.6s 1 forwards;
+}
+
+.create-workout-link,
+.profile-link {
+  text-decoration: none;
+  font-size: 1.1em;
+  color: #263044;
+  display: block;
+  border-radius: 5px;
+  float: right;
+  line-height: 0.85;
+  padding: 10px;
+  position: relative;
+}
+.logo {
+  width: 65px;
+  height: 100%;
+  margin-left: 30px;
+  float: left;
+  opacity: 1;
+  display: flex;
+  align-items: center;
+}
+.logo a {
+  font-family: PT Sans Caption, sans-serif;
+  text-decoration: none;
+  color: black;
+  font-size: 2em;
+}
+.red-text {
+  font-family: PT Sans Caption, sans-serif;
+  text-decoration: none;
+  color: #ff6666;
+}
+
+.navbar-buffer {
+  width: 100%;
+  height: 110px;
+}
+.tags-container {
+  background-color: #efefef;
+}
+.tags {
+  padding: 40px 40px;
+  max-width: 1400px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: flex-end;
+}
+.tag {
+  margin: 10px 15px;
+  width: 150px;
+  height: 70px;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.7s;
+  border-radius: 8px;
+  opacity: 0;
+}
+.tag h2 {
+  font-weight: normal;
+}
+.tag:hover {
+  box-shadow: 0 4px 12px 4px lightgray;
+}
+
+.workouts-container {
+  background-color: white;
+}
+.workouts {
+  padding: 50px 0px;
+  max-width: 1400px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+.workout {
+  width: 250px;
+  height: 400px;
+  background-color: #fff2f2;
+  margin: 30px 50px;
+  transition: 0.7s;
+  border-radius: 8px;
+  text-align: center;
+  opacity: 0;
+}
+.workout-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 8px 8px 0px 0px;
+}
+.workout:hover {
+  box-shadow: 0 7px 24px 7px lightgray;
+}
+.workout-top-half {
+  height: 50%;
+  width: 100%;
+  border-radius: 8px 8px 0px 0px;
+  background-color: white;
+}
+.workout-bottom-half {
+  padding: 20px 15px;
+}
+.workout-title {
+  font-size: 27px;
+  margin-bottom: 8px;
+}
+.workout-author {
+  text-transform: uppercase;
+  font-size: 14px;
+  margin-bottom: 15px;
+}
+.workout-description {
+  text-transform: uppercase;
+  font-size: 14px;
+  margin-bottom: 15px;
+}
+
+/* description */
+.description-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.description-card {
+  width: auto;
+  height: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.first-half {
+  width: 400px;
+  height: 500px;
+  border-radius: 15px;
+  background-color: lightgreen;
+}
+.second-half {
+  width: 500px;
+  height: 500px;
+  background-color: lightblue;
+}
+
+/* pre-loader */
+
+.loader-wrapper {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: white;
+  z-index: 2;
+}
+.loader {
+  display: block;
+  width: 60px;
+  height: 60px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 40vh;
+}
+.loader:after {
+  content: " ";
+  display: block;
+  width: 64px;
+  height: 64px;
+  margin: 8px;
+  border-radius: 50%;
+  border: 6px solid #515151;
+  border-color: #515151 transparent #515151 transparent;
+  animation: lds-dual-ring 1.2s linear infinite;
+}
+@keyframes lds-dual-ring {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
