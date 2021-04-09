@@ -1,0 +1,12 @@
+{
+    "type": "service_account",
+    "project_id": "papasquat-test",
+    "private_key_id": "099e27a124825603d49128ad7f774cab24a4ca92",
+    "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvAIBADANBgkqhkiG9w0BAQEFAASCBKYwggSiAgEAAoIBAQDmaciitMVLdDRk\nbchK4BFwmsxMTwQ5ghJcbvrJBYXP+N6/IIeWfvwiwcs1viaE159SOjoQZyulK6g6\n4GeIGYhXXfqr44xgk+5L77YPZtyVoLKqKkTVZ9vVP/Wz4CYy54kzYYZO+9bZhXZD\nBN/9ELOhCHDQKK+XTkvEB//jy9ZFzFObdu7EXB2rh7v0ony3ZCuZlRugwbROQVJO\nJyGQWIuo3eN9SEm0savImodN+CICLvgIG0AECcOEBY6MgnMYc9cuGVzFjFkavQac\nButloQL24EOh6psxoZHOuQ/Z6s3DNKM+hsu2lNcYiLJPJCv+SFCIM+FL+yIr4YP5\ntLvT8EPzAgMBAAECggEAE2y1mmns/Bh21kSfDxjmv3x9Xq2GqKZ7j8lXYR0TE95i\nQPCoHZrk/LUjwYsfSjG3X8JC5OEdv9X3X8dNUx777ImiuVz8l6PBAivaSGAeloqu\npUPc+7S+xrKWryxlbAMzAN7m6L+4dCwZNTsy+u2uhxPkFthnPTU/k+4st3KWxNl0\n+4tOpBHU2qm+sJGOSP3SXlzZ69LfrGWwziFDDYSvqrykjr+Kzmc8cx4mLetOVGac\nL+rKeS94PzoF1kwzlI6tlSNscSMaJguM5hhqHU7Z8kGEYc144sv1Tj4OdOIEH6V6\nhY7MFqd7u1SFck5mWBIXr7aixyXFjtvBxb5NhodJSQKBgQD0OhjcFSwVVg5BIA9d\nI+QdXjO+4JkTP9H3ZxAMVwnryvGkTAXbTit8NkjDpsqFsIxORQNd76v547G92Z0f\ncGQTNosiHvYtUhKcBPsUwv3iliQ9LYeipmwOOn5LLgISBcN4Hh9zrZAF8RQGNDCf\nPlfuiHU3pcUJKfEZBnooaDaJrQKBgQDxhTebQxEJv1JnN1llm+2e7VeebBIKgH6X\nAd5cT8qnfhaJcvUqVk4UxgwzsAFxJf2jNFYvdbfvZzr6D5wrcvMroGZC9wuGIUWY\nJ1GELBFkQOGG4Ue9jAzfoxYVwqM7FXNKxYa6nWcfJPEjVTON7sNnJrKL6Y6EqRnD\n+4TuSo74HwKBgFOjgdf9ODemXQNYo2pWXEzicf4wlLvO421C0nAnbrJdsht+HZNZ\nVfMX9BttB3Z5W9OCNwD4j4DoxXorCHA34U3jJArvZ4dl0BG2cvZNQP1URdzdttGx\nBNhql83PV84sQyDj0Amhqu0d/qmRPgWLKDn8aYhBMRVOU88qNLOZ3PORAoGAclW/\nckf4m+Wvq98++eQsRG1ValD85W3Y/8HJs2eup0YAg0chms5Knnj3M8zhkeALR6Sy\nHDudPL9g4xpasxLy3TdM0ezDztaXbKVIaMq33P7+BO1HGgtf2MsK3HhM796CuuXx\nlwyG0e6aHUDrbAiZBo8CPUvuxQyMfwPl9Szkq78CgYBpbZurBgc1WsUP9Qt79x4/\n6dnnzL6K9o34YOhQpYqM+7TPEczYGPaYAV613jj720MeVF6ZtSMf2bCGG5/1r258\nz96EIid8z/IsVdStTpAb6OGQiTDAPPEqnjqArsEDrlZ+oQSM3FLwWhNebtPuelo/\nlukpkaKph4vQ33ihWVv/Ng==\n-----END PRIVATE KEY-----\n",
+    "client_email": "firebase-adminsdk-nbhh4@papasquat-test.iam.gserviceaccount.com",
+    "client_id": "109815169655426388731",
+    "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+    "token_uri": "https://oauth2.googleapis.com/token",
+    "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+    "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/firebase-adminsdk-nbhh4%40papasquat-test.iam.gserviceaccount.com"
+}
