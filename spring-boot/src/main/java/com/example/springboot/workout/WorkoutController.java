@@ -1,4 +1,4 @@
-package com.restService;
+package com.example.springboot.workout;
 
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -8,7 +8,7 @@ public class WorkoutController {
 
     @RequestMapping("/hello")
     public String sayHi() {
-        return "Hi";
+        return "{'Name': 'Dylan'}";
     }
-    
+
 }

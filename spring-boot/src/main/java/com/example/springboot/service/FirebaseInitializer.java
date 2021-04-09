@@ -16,8 +16,7 @@ public class FirebaseInitializer {
     @PostConstruct
     public void initialize() {
         try {
-            FileInputStream serviceAccount = new FileInputStream("./firebaseDB.json");
-            System.out.println(serviceAccount);  // TODO: Remove this
+            FileInputStream serviceAccount = new FileInputStream("src/main/resources/secrets/firebaseDB.json");
             FirebaseOptions options = new FirebaseOptions.Builder()
                     .setCredentials(GoogleCredentials.fromStream(serviceAccount))
                     .setDatabaseUrl("https://papaSquat-test.firebaseio.com/")

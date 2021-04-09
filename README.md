@@ -52,6 +52,8 @@
 4. You can edit current documents, delete them, or create new ones through this page.
 
 ### Connecting Springboot to DB ###
-1. Go to `spring-boot/src/secrets/firebaseDB.json`
+1. Ask a team member for the json file with secrets to the database.
+1. Go to `spring-boot/src/main/resources/secrets/`
+2. Create a new file called `firebaseDB.json`
 2. Put the DB secrets there. This will tell Springboot what DB to connect to.
 

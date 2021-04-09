@@ -32,4 +32,4 @@ build/
 ### VS Code ###
 .vscode/
 
-/src/main/secrets/firebaseDB.json
+/src/main/resources/secrets/*
