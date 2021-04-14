@@ -13,6 +13,7 @@ import java.io.FileInputStream;
 
 @Service
 public class FirebaseInitializer {
+    
     @PostConstruct
     public void initialize() {
         try {
