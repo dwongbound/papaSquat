@@ -6,7 +6,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 In the project directory, you can run:
 
-#### Useful Dependencies
+#### <b>Useful Dependencies</b>
 `npm install react-router-dom`
 
 This will install the react-router to the required folder
