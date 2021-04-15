@@ -65,4 +65,9 @@ public class WorkoutController {
         return collectionsApiFuture.get().getUpdateTime().toString();
     }
 
+    @PostMapping("/putVote")
+    public String updateVote(@RequestBody Workout workout) throws InterruptedException, ExecutionException {
+        CollectionReference workoutCollection = fbDB.getFirebase().collection("workouts");
+    }
+
 }
