@@ -1,11 +1,14 @@
 import React, { Component } from 'react';
-import { Link, Route } from 'react-router-dom';
+//import { Link, Route } from 'react-router-dom';
 import pullups from '../images/pullups.jpg';
 import random from '../images/random.jpg';
 import row from '../images/row.jpg';
 import shoulderPress from '../images/shoulder_press.jpg';
 import Create from './Create';
 import styled from "styled-components";
+import FontAwesomeIcon from '@fortawesome/react-fontawesome'
+//import oauth from './Oauth';
+import $ from 'jquery';
 
 
 function clickMe(){
@@ -33,32 +36,11 @@ const Button = styled(sLink)`
   position: relative;
 `;
 
-
-
 class Homepage extends Component{
     render(){
         return (
     
           <div className = "Homepage">
-        
-            <title>omegapapasquat</title>
-           
-         {/* external css */}
-         <link rel="stylesheet" type="text/css" href="styles.css" />
-         {/* required meta tags */}
-         <meta charSet="utf-8" />
-         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-         <meta property="og:image" content />
-         <meta property="og:type" content="website" />
-         <meta property="og:title" content="omegasquat" />
-         <meta property="og:description" content="Share your personalized workouts with your friends!" />
-         {/* fonts */}
-         <link rel="preconnect" href="https://fonts.gstatic.com" />
-         <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap" rel="stylesheet" />
-         <link href="https://fonts.googleapis.com/css2?family=PT+Serif:wght@300;400;500;700&display=swap" rel="stylesheet" />
-         <link rel="preconnect" href="https://fonts.gstatic.com" />
-         <link href="https://fonts.googleapis.com/css2?family=PT+Sans+Caption:wght@700&display=swap" rel="stylesheet" />
-         
             <div className="main">
               <div className="main-nav">
                 <div className="logo">
@@ -67,8 +49,6 @@ class Homepage extends Component{
 
                 <div className="navbar">
                   <button className="profile-link" href="#courses">Profile</button>
-            
-          
             
                
                   <a className = "create-workout-link" href ="/Create">Create Workout</a>
@@ -127,7 +107,17 @@ class Homepage extends Component{
                       <h1 className="workout-title">Extreme Pullups</h1>
                       <h2 className="workout-author">David Kang</h2>
                       <p className="workout-description">Work your entire back with this intense but quick 20-minute workout.</p>
+                     
+                      <div className="upvotes">
+                      <h2>
+                        {/* need to import font-awesome library for this (here's the documentation for React: https://fontawesome.com/how-to-use/on-the-web/using-with/react) */}
+                        <i className="fas fa-chevron-up" />
+                        <span className="upvote-count">15</span>
+                        <i className="fas fa-chevron-down" />
+                      </h2>
                     </div>
+                    
+                      </div>
                     </a>
                   </div> 
                   <div className="workout workouts-fade-in-animation">
@@ -138,7 +128,16 @@ class Homepage extends Component{
                       <h1 className="workout-title">Lorem Ipsum</h1>
                       <h2 className="workout-author">David Kang</h2>
                       <p className="workout-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna. </p>
-                    
+                      
+                      <div className="upvotes">
+                      <h2>
+                        {/* need to import font-awesome library for this (here's the documentation for React: https://fontawesome.com/how-to-use/on-the-web/using-with/react) */}
+                        <i className="fas fa-chevron-up" />
+                        <span className="upvote-count">15</span>
+                        <i className="fas fa-chevron-down" />
+                      </h2>
+                    </div>
+
                     </div>
                   </div> 
                   <div className="workout workouts-fade-in-animation">
@@ -150,6 +149,16 @@ class Homepage extends Component{
                       <h2 className="workout-author">David Kang</h2>
                       <p className="workout-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna. </p>
                  
+                      <div className="upvotes">
+                      <h2>
+                        {/* need to import font-awesome library for this (here's the documentation for React: https://fontawesome.com/how-to-use/on-the-web/using-with/react) */}
+                        <i className="fas fa-chevron-up" />
+                        <span className="upvote-count">15</span>
+                        <i className="fas fa-chevron-down" />
+                      </h2>
+                    </div>
+
+
                     </div>
                   </div> 
                   <div className="workout workouts-fade-in-animation">
@@ -161,6 +170,16 @@ class Homepage extends Component{
                       <h2 className="workout-author">David Kang</h2>
                       <p className="workout-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna. </p>
                      
+                      <div className="upvotes">
+                      <h2>
+                        {/* need to import font-awesome library for this (here's the documentation for React: https://fontawesome.com/how-to-use/on-the-web/using-with/react) */}
+                        <i className="fas fa-chevron-up" />
+                        <span className="upvote-count">15</span>
+                        <i className="fas fa-chevron-down" />
+                      </h2>
+                    </div>
+
+
                     </div>
                   </div> 
                   <div className="workout workouts-fade-in-animation">
@@ -172,6 +191,16 @@ class Homepage extends Component{
                       <h2 className="workout-author">David Kang</h2>
                       <p className="workout-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna. </p>
                      
+
+                      <div className="upvotes">
+                      <h2>
+                        {/* need to import font-awesome library for this (here's the documentation for React: https://fontawesome.com/how-to-use/on-the-web/using-with/react) */}
+                        <i className="fas fa-chevron-up" />
+                        <span className="upvote-count">15</span>
+                        <i className="fas fa-chevron-down" />
+                      </h2>
+                    </div>
+
                     </div>
                   </div> 
                   <div className="workout workouts-fade-in-animation">
@@ -183,6 +212,15 @@ class Homepage extends Component{
                       <h2 className="workout-author">David Kang</h2>
                       <p className="workout-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna. </p>
                   
+                      <div className="upvotes">
+                      <h2>
+                        {/* need to import font-awesome library for this (here's the documentation for React: https://fontawesome.com/how-to-use/on-the-web/using-with/react) */}
+                        <i className="fas fa-chevron-up" />
+                        <span className="upvote-count">15</span>
+                        <i className="fas fa-chevron-down" />
+                      </h2>
+                    </div>
+
                     </div>
                   </div> 
                   <div className="workout workouts-fade-in-animation">
@@ -194,6 +232,15 @@ class Homepage extends Component{
                       <h2 className="workout-author">David Kang</h2>
                       <p className="workout-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna. </p>
                      
+                      <div className="upvotes">
+                      <h2>
+                        {/* need to import font-awesome library for this (here's the documentation for React: https://fontawesome.com/how-to-use/on-the-web/using-with/react) */}
+                        <i className="fas fa-chevron-up" />
+                        <span className="upvote-count">15</span>
+                        <i className="fas fa-chevron-down" />
+                      </h2>
+                    </div>
+
                     </div>
                   </div> 
                   <div className="workout workouts-fade-in-animation">
@@ -205,6 +252,17 @@ class Homepage extends Component{
                       <h2 className="workout-author">David Kang</h2>
                       <p className="workout-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna. </p>
                      
+
+                      <div className="upvotes">
+                      <h2>
+                        {/* need to import font-awesome library for this (here's the documentation for React: https://fontawesome.com/how-to-use/on-the-web/using-with/react) */}
+                        <i className="fas fa-chevron-up" />
+                        <span className="upvote-count">15</span>
+                        <i className="fas fa-chevron-down" />
+                      </h2>
+                    </div>
+
+
                     </div>
                   </div> 
                   <div className="workout workouts-fade-in-animation">
@@ -216,14 +274,24 @@ class Homepage extends Component{
                     <h2 className="workout-author">David Kang</h2>
                     <p className="workout-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna. </p>
                    
+                    <div className="upvotes">
+                    <h2>
+                      {/* need to import font-awesome library for this (here's the documentation for React: https://fontawesome.com/how-to-use/on-the-web/using-with/react) */}
+                      <div id='fas fa-chevron-up' />
+                      <span className="upvote-count">15</span>
+                      <div id="fas fa-chevron-down" />
+                    </h2>
+                  </div>
+
                   </div>
                 </div> 
                 </div>
               </div>
             </div>
-          </div>
+            </div>
         );
       }
-}
+    }
+  
 
 export default Homepage;

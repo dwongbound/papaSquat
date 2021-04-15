@@ -1,11 +1,14 @@
-import React from "react";
+import React, {Component} from 'react';
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 //import { Element } from "react-scroll";
 //import { css } from "emotion";
 //import LinkIcons from "./LinkIcons";
+import $ from "jquery";
 
-const Container = styled("div")`
+//the navigation bar will be used to go through each page
+
+/* const Container = styled("div")`
   display: flex;
   width: 100%;
   height: 100%;
@@ -42,27 +45,59 @@ const RightLinkBox = styled(LinkBox)`
   justify-self: flex-end;
 `;
 
-export default class Navbar extends React.Component {
+	// Navbar effect
+	var nav = document.querySelector('.main-nav');
+	window.addEventListener('scroll', function(){
+		if(window.pageYOffset > 10){
+			nav.classList = 'main-nav small'
+			document.querySelector('#logo').src = "images/logoblack.png";
+			let links = document.querySelectorAll('.nav-links');
+			for (let i=0; i<links.length; i++){
+				links[i].style.color = 'rgb(70,55,48)'
+			}
+		} else {
+			nav.classList ='main-nav'
+			// document.querySelector('#logo').src = "images/logowhite.png"
+			// let links = document.querySelectorAll('.nav-links');
+			// for (let i=0; i<links.length; i++){
+			// 	links[i].style.color = 'white';
+			// }
+		}
+	})
+
+	// pre-loader
+	$(window).on("load", function(){
+		$(".loader-wrapper").fadeOut("slow");
+
+		// $(".navbar").addClass( "nav-fade-in-animation" );
+		// $(".logo").addClass( "nav-fade-in-animation" );
+		$(".tag").addClass( "tags-fade-in-animation" );
+		$(".workout").addClass( "workouts-fade-in-animation" );
+		$( ".resume-link" ).addClass( "highlight-animation3" );
+		$( ".highlight1" ).addClass( "highlight-animation1" );
+		$( ".highlight2" ).addClass( "highlight-animation2" );
+	});
+*/
+class NavBar extends React.Component {
+
+  state ={ clicked: false }
+
+  handleClick= () => {
+    this.setState({ clicked: !this.state.clicked })
+  }
   render() {
     return (
-      
-        <Container>
-          <LinkBox>
-            <StyledLink to="/Homepage">Home</StyledLink>
-          </LinkBox>
-          <LinkBox>
-            <StyledLink to="/Description">Description</StyledLink>
-          </LinkBox>
-          <LinkBox>
-            <StyledLink to="/Create">Create</StyledLink>
-          </LinkBox>
-          <LinkBox>
-          </LinkBox>
-          <DummyFiller />
-          <RightLinkBox>
+      <nav className="navbar">
+                  <button className="profile-link" href="#courses">Profile</button>
+          <div className ="main-nav">
           
-          </RightLinkBox>
-        </Container>
-    );
+          </div>
+               
+                  <a className = "create-workout-link" href ="/Create">Create Workout</a>
+          
+          </nav>
+              
+    )          
   }
 }
+export default NavBar;

@@ -158,7 +158,7 @@ h1 {
 }
 .workout {
   width: 250px;
-  height: 400px;
+  height: 500px; /* changed */
   background-color: #fff2f2;
   margin: 30px 50px;
   transition: 0.7s;
@@ -182,7 +182,9 @@ h1 {
   background-color: white;
 }
 .workout-bottom-half {
+  height: 50%; /* added */
   padding: 20px 15px;
+  position: relative; /* added */
 }
 .workout-title {
   font-size: 27px;
@@ -194,9 +196,6 @@ h1 {
   margin-bottom: 15px;
 }
 .workout-description {
-  text-transform: uppercase;
-  font-size: 14px;
-  margin-bottom: 15px;
 }
 
 /* description */
@@ -218,12 +217,181 @@ h1 {
   width: 400px;
   height: 500px;
   border-radius: 15px;
-  background-color: lightgreen;
+  padding: 30px;
+  text-align: center;
+  background-color: #efefef;
 }
 .second-half {
   width: 500px;
   height: 500px;
-  background-color: lightblue;
+}
+.description-title {
+  font-size: 40px;
+  margin-bottom: 8px;
+}
+.description-image {
+  width: 270px;
+  height: 270px;
+  object-fit: cover;
+  border-radius: 15px;
+}
+.description-author {
+  text-transform: uppercase;
+  font-size: 20px;
+  margin-bottom: 25px;
+}
+.upvotes {
+  position: absolute;
+  /* centers it */
+  bottom: 10px;
+  left: 65px;
+  margin-top: 20px;
+}
+.description-card .upvotes {
+  position: static;
+}
+.upvotes i {
+  margin: 10px;
+  font-size: 30px;
+}
+.fa-chevron-up {
+  position: relative;
+  transition-duration: 0.5s;
+}
+.fa-chevron-up:hover {
+  transform: translate(0px, -5px);
+}
+.fa-chevron-down {
+  position: relative;
+  transition-duration: 0.5s;
+}
+.fa-chevron-down:hover {
+  transform: translate(0px, 5px);
+}
+.upvote-count {
+  color: #ef1a1a;
+}
+.second-half {
+  padding-left: 50px;
+}
+.second-half .tags {
+  margin: 0px;
+  padding-left: 0px;
+  justify-content: flex-start;
+}
+.second-half .tag {
+  margin-left: 0px;
+  margin-bottom: 0px;
+  margin-top: 0px;
+  width: 100px;
+  height: 50px;
+  opacity: 1;
+  background-color: #efefef;
+}
+.second-half .tag h2 {
+  font-size: 1.2em;
+}
+.description p {
+  font-size: 1.1em;
+}
+
+/* create workout */
+.create-workout-container {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+}
+.create-workout-card {
+  width: 400px;
+  height: auto;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 15px;
+  background-color: #efefef;
+  padding: 50px 30px 0px 30px;
+}
+.create-workout-form input,
+.create-workout-form textarea {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 30px;
+  border: none;
+  padding: 10px;
+  border-radius: 10px;
+  width: 300px;
+}
+.create-workout-form textarea {
+  height: 400px;
+}
+.submit-button {
+  background-color: #ff6766;
+  color: white;
+  transition: all 0.5s;
+}
+.submit-button:hover {
+  background-color: #ff3535;
+}
+.checkboxes {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 300px;
+  margin: 20px;
+}
+.container {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 22px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  width: 150px;
+}
+.container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: #ccc;
+}
+.container:hover input ~ .checkmark {
+  background-color: #ccc;
+}
+.container input:checked ~ .checkmark {
+  background-color: #ff3535;
+}
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+.container input:checked ~ .checkmark:after {
+  display: block;
+}
+.container .checkmark:after {
+  left: 9px;
+  top: 5px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
 }
 
 /* pre-loader */
