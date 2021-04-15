@@ -6,6 +6,16 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 In the project directory, you can run:
 
+#### Useful Dependencies
+`npm install react-router-dom`
+
+This will install the react-router to the required folder
+
+
+`npm install googleapis`
+
+This will install googleapis for OAuth 2.0 functionality.
+
 ### `npm start`
 
 Runs the app in the development mode.\
