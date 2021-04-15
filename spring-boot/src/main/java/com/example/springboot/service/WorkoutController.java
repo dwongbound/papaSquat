@@ -43,6 +43,7 @@ public class WorkoutController {
         for (DocumentSnapshot doc : snapshot.get().getDocuments()) {
             workoutList.add(doc.toObject(Workout.class));
         }
+        System.out.println("=> Sucussfully returned all workouts.");
         return workoutList;
     }
 
@@ -54,20 +55,31 @@ public class WorkoutController {
         for (DocumentSnapshot doc : snapshot.get().getDocuments()) {
             categories.add(doc.toObject(Category.class));
         }
+        System.out.println("=> Sucussfully returned categories.");
         return categories;
     }
 
     @PostMapping("/createWorkout")
-    public String createNewWorkout(@RequestBody Workout workout) throws InterruptedException, ExecutionException {
+    public String createNewWorkout(@RequestBody WorkoutPostWrapper wrapper) 
+            throws InterruptedException, ExecutionException {
+        Workout workout = new Workout(wrapper.caption, wrapper.desc, wrapper.creator, wrapper.title);
         CollectionReference workoutCollection = fbDB.getFirebase().collection("workouts");
         ApiFuture<WriteResult> collectionsApiFuture = workoutCollection.document(workout.getCreator())
                 .set(workout);
+        System.out.println("=> Sucussfully created workout.");
         return collectionsApiFuture.get().getUpdateTime().toString();
     }
 
-    @PostMapping("/putVote")
-    public String updateVote(@RequestBody Workout workout) throws InterruptedException, ExecutionException {
-        CollectionReference workoutCollection = fbDB.getFirebase().collection("workouts");
-    }
+    // @PostMapping("/putVote")
+    // public String updateVote(@RequestBody Workout workout) throws InterruptedException, ExecutionException {
+    //     CollectionReference workoutCollection = fbDB.getFirebase().collection("workouts");
+    // }
 
+}
+
+class WorkoutPostWrapper {
+    public String caption;
+    public String creator;
+    public String title;
+    public String desc;
 }
