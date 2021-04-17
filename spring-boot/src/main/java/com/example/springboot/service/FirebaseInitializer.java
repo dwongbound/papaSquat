@@ -17,13 +17,14 @@ public class FirebaseInitializer {
     @PostConstruct
     public void initialize() {
         try {
-            FileInputStream serviceAccount = new FileInputStream("src/main/resources/secrets/firebaseDB.json");
+            FileInputStream serviceAccount = new FileInputStream("src/main/resources/serviceAccount.json");
             FirebaseOptions options = new FirebaseOptions.Builder()
                     .setCredentials(GoogleCredentials.fromStream(serviceAccount))
                     .setDatabaseUrl("https://papaSquat-test.firebaseio.com/")
                     .build();
 
-            FirebaseApp.initializeApp(options);
+            FirebaseApp app = FirebaseApp.initializeApp(options);
+            System.out.println(app.getName());
             System.out.println("=> Connected to database.");
         } catch (Exception err) {
             System.out.println("=> Error in connecting to DB: " + err);

@@ -8,6 +8,7 @@ import com.example.springboot.service.FirebaseInitializer;
 import com.google.api.core.ApiFuture;
 import com.google.cloud.firestore.CollectionReference;
 import com.google.cloud.firestore.DocumentSnapshot;
+import com.google.cloud.firestore.Firestore;
 import com.google.cloud.firestore.QuerySnapshot;
 import com.google.cloud.firestore.WriteResult;
 import com.google.firebase.FirebaseApp;
@@ -28,7 +29,9 @@ import com.example.springboot.workout.Workout;
 public class WorkoutController {
 
     @Autowired
-    FirebaseInitializer fbDB;
+    private static FirebaseInitializer fbDB;
+
+    
 
     @RequestMapping("/hello")
     public String sayHi() {
@@ -36,7 +39,7 @@ public class WorkoutController {
     }
 
     @GetMapping("/getAllWorkouts")
-    public List<Workout> getAllWorkouts() throws InterruptedException, ExecutionException {
+    public static List<Workout> getAllWorkouts() throws InterruptedException, ExecutionException {
         List<Workout> workoutList = new ArrayList<Workout>();
         CollectionReference workout = fbDB.getFirebase().collection("workouts");
         ApiFuture<QuerySnapshot> snapshot = workout.get();

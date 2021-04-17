@@ -7,6 +7,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class PapasquatSpringBootApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(PapasquatSpringBootApplication.class, args);
+		
 	}
 
 }
