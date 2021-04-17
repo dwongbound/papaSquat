@@ -29,17 +29,15 @@ import com.example.springboot.workout.Workout;
 public class WorkoutController {
 
     @Autowired
-    private static FirebaseInitializer fbDB;
-
+    FirebaseInitializer fbDB;
     
-
     @RequestMapping("/hello")
     public String sayHi() {
         return "{'Name': 'Dylan'}";
     }
 
     @GetMapping("/getAllWorkouts")
-    public static List<Workout> getAllWorkouts() throws InterruptedException, ExecutionException {
+    public List<Workout> getAllWorkouts() throws InterruptedException, ExecutionException {
         List<Workout> workoutList = new ArrayList<Workout>();
         CollectionReference workout = fbDB.getFirebase().collection("workouts");
         ApiFuture<QuerySnapshot> snapshot = workout.get();
