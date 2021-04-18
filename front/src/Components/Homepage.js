@@ -6,6 +6,7 @@ import row from '../images/row.jpg';
 import shoulderPress from '../images/shoulder_press.jpg';
 import Create from './Create';
 import styled from "styled-components";
+import { render } from 'react-dom';
 
 
 function clickMe(){
@@ -32,11 +33,50 @@ const Button = styled(sLink)`
   padding: 10px;
   position: relative;
 `;
-
-
+var responseArray;
 
 class Homepage extends Component{
+  constructor() {
+    super();
+    //used to track when fetch request completes
+    this.state = {loading:true}
+  }
+  //calls fetch getAllWorkouts once when homepage loads
+    componentDidMount() {
+      const that = this;
+      console.log("before fetch:");
+      fetch("http://localhost:8080/api/getAllWorkouts")
+      .then(function(response){ return response.json(); })
+      .then(function(data) {
+        responseArray = data;
+        that.setState({loading : false}, function() {console.log("penis" + that.state.loading);})
+      })
+    }
+    componentWillUnmount() {
+
+    }
     render(){
+      var workouts = [];
+      //rerenders html with workouts once fetch request completes
+      if(this.state.loading === false){
+        for(let i = 0; i < responseArray.length; i++){
+          var workout = (
+            <div className="workout workouts-fade-in-animation">
+            <div className="workout-top-half">
+            <img className="workout-image" src={row} alt = "Row" />
+            </div>
+            <div className="workout-bottom-half">
+            <h1 className="workout-title">{responseArray[i].caption}</h1>
+            <h2 className="workout-author">{responseArray[i].creator}</h2>
+            <p className="workout-description">{responseArray[i].desc}</p>
+    
+            </div>
+            </div>
+      
+          )
+          workouts.push(workout);
+        }
+      }
         return (
     
           <div className = "Homepage">
@@ -117,8 +157,10 @@ class Homepage extends Component{
                 </div>
               </div>
               <div className="workouts-container">
+                
                 <div className="workouts">
-                  <div className="workout workouts-fade-in-animation">
+                {workouts}
+                  {/* <div className="workout workouts-fade-in-animation">
                     <div className="workout-top-half">
                       <img className="workout-image" src={pullups} alt = "Pullups" />
                     </div>
@@ -217,9 +259,9 @@ class Homepage extends Component{
                     <p className="workout-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna. </p>
                    
                   </div>
-                </div> 
+                </div>*/} 
                 </div>
-              </div>
+              </div> 
             </div>
           </div>
         );
