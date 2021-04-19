@@ -4,7 +4,6 @@ import styled from "styled-components";
 //import { Element } from "react-scroll";
 //import { css } from "emotion";
 //import LinkIcons from "./LinkIcons";
-import $ from "jquery";
 
 //the navigation bar will be used to go through each page
 
